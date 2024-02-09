@@ -1,0 +1,23 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "markuplint": "markuplint \"./src/**/*.astro\""
+  },
+  "dependencies": {
+    "@markuplint/astro-parser": "^3.11.0",
+    "@splidejs/splide": "^4.1.4",
+    "@types/node": "^20.8.10",
+    "astro": "^3.4.3",
+    "astro-relative-links": "^0.3.4",
+    "markuplint": "^3.14.0",
+    "sass": "^1.69.5"
+  }
+}

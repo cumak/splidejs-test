@@ -1,0 +1,91 @@
+@use 'variable' as *;
+
+html {
+	font-size: 62.5%;
+	@include sp{
+		font-size: 62.8%;
+	}
+	&:has(.is-android) {
+		font-size: 58%;
+	}
+}
+
+body{
+	font-size:1.6rem;
+	color: var(--fontColor);
+	@include font-go;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	background: #f0f3ff;
+}
+
+.for-pc{
+	@include sp{
+		display: none !important;
+	}
+}
+
+.for-sp{
+	@include pc-tab{
+		display: none !important;
+	}
+}
+
+img{
+	max-width:100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+a{
+	text-decoration:none;
+	transition:all .3s;
+	img{
+		opacity:1;
+		transition:all .3s;
+	}
+	@include pc-tab{
+		&:hover{
+				img{
+					opacity:0.8;
+				}
+		}
+	}
+	@include sp{
+		&:active{
+				img{
+					opacity:0.8;
+				}
+		}
+	}
+}
+
+p{
+	line-height:190%;
+	& + p{
+		margin-top: 1.2rem;
+	}
+	a{
+		@include pc-tab{
+			&:hover{
+				color:var(--linkColor);
+			}
+		}
+		@include sp{
+			&:active{
+				color:var(--linkColor);
+			}
+		}
+	}
+}
+
+ol{
+	padding-left: 2rem;
+}
+
+ruby rt{
+	font-size:40%;
+}
+

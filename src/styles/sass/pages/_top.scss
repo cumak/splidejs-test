@@ -1,0 +1,81 @@
+@use '../foundation/variable' as *;
+
+.mySlider{
+  &-track{
+    padding-block: 80px 90px;
+    @include sp{
+      padding-block: 80px;
+    }
+    .splide__slide{
+      width: fit-content;
+      &.is-active:not(.splide__slide--clone){
+        padding-inline: 60px;
+        @include sp{
+          padding-inline: 20px;
+        }
+      }
+    }
+  }
+  &-prev{
+    display: none;
+  }
+  &-next{
+    appearance: none;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+    @include sp{
+      top: 46%;
+      width: 50px;
+    }
+    svg{
+      transition: all .3s;
+      width: 100%;
+      .circle{
+        transition: all .3s;
+      }
+      @include hover{
+        &:hover{
+          transform: scale(1.1);
+          .circle{
+            fill: #4e0de6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.panel{
+  width: 303px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #333;
+  transition: transform .7s;
+  @include sp{
+    width: auto;
+    padding: 10px;
+  }
+  .splide__slide.is-active:not(.splide__slide--clone) &{
+    transform: scale(1.4);
+  }
+  &-img{
+    margin-bottom: 10px;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  &-text{
+    font-size: 1.2rem;
+  }
+}

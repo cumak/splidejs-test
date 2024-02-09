@@ -1,0 +1,73 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout>
+<div class="mySlider splide">
+	<div class="mySlider-track splide__track">
+		<div class="mySlider-list splide__list">
+			<div class="splide__slide">
+				<div class="panel">
+					<div class="panel-img">
+						<img src="/img/top/img-1.webp" width="300" height="200" alt="">
+					</div>
+					<div class="panel-text">アクティブパネルにはis-activeクラスがつきます。</div>
+				</div>
+			</div>
+			<div class="splide__slide">
+				<div class="panel">
+					<div class="panel-img">
+						<img src="/img/top/img-2.webp" width="300" height="200" alt="">
+					</div>
+					<div class="panel-text">splide.jsのテストです。</div>
+				</div>
+			</div>
+			<div class="splide__slide">
+				<div class="panel">
+					<div class="panel-img">
+						<img src="/img/top/img-3.webp" width="300" height="200" alt="">
+					</div>
+					<div class="panel-text">3番目のパネルです。</div>
+				</div>
+			</div>
+			<div class="splide__slide">
+				<div class="panel">
+					<div class="panel-img">
+						<img src="/img/top/img-4.webp" width="300" height="200" alt="">
+					</div>
+					<div class="panel-text">4番目のパネルです。</div>
+				</div>
+			</div>
+			<div class="splide__slide">
+				<div class="panel">
+					<div class="panel-img">
+						<img src="/img/top/img-5.webp" width="300" height="200" alt="">
+					</div>
+					<div class="panel-text">最後のパネルです。</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 規定のHTMLでオリジナル矢印を追加 -->
+	<div class="splide__arrows">
+		<!-- Prevは今回いらないが、HTMLを消すと機能しなくなるのでCSSで消す -->
+		<button class="mySlider-prev splide__arrow splide__arrow--prev">
+			Prev
+		</button>
+		<button class="mySlider-next splide__arrow splide__arrow--next" aria-label="次のスライドへ">
+			<svg 
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				viewBox="0 0 163.5 163.5"
+				>
+				<path class="circle" fill-rule="evenodd" fill="rgb(55, 55, 55)"
+				d="M80.000,0.000 C124.183,0.000 159.1000,35.817 159.1000,80.000 C159.1000,124.183 124.183,159.1000 80.000,159.1000 C35.817,159.1000 0.000,124.183 0.000,80.000 C0.000,35.817 35.817,0.000 80.000,0.000 Z"/>
+				<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="7px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+				d="M38.043,78.484 L119.583,78.484 "/>
+				<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="7px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+				d="M87.431,50.247 L119.1000,78.000 L87.388,108.763 "/>
+			</svg>
+		</button>
+  </div>
+</div>
+</Layout>

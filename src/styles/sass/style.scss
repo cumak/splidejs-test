@@ -1,0 +1,15 @@
+@forward 'foundation/variable.scss';
+
+//リセット
+@forward 'foundation/reset.scss';
+
+//共通（グローバル）
+@forward 'foundation/global.scss';
+
+//共通（案件毎の共通レイアウト component以上サイズ）
+@forward 'components/common.scss';
+@forward 'components/footer.scss';
+@forward 'components/header.scss';
+
+//各ページ
+@forward 'pages/top.scss';

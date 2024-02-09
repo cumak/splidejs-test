@@ -1,0 +1,278 @@
+@charset "UTF-8";
+:root {
+  --themeColor:#ef4d63;
+  --themeColor-lt:#fcf1ed;
+  --pointColor:#ac8839;
+  --linkColor:#87eaf9;
+  --bgColor:#f7f7f7;
+  --fontColor: #000;
+  --w:1280px;
+  --widthXL:1380px;
+  --widthLG:980px;
+  --widthTab:768px;
+  --font-go-base: "Hiragino Kaku Gothic Pro" ,"游ゴシック体", "Yu Gothic Medium" , "Yu Gothic", Meiryo ,sans-serif;
+  --font-mi-base: "Hiragino Mincho ProN", "Yu Mincho","YuMincho", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, select, main, address, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 140%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+  box-sizing: border-box;
+}
+
+a, span, details, summary {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+strong {
+  font-style: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-bottom;
+}
+
+sub {
+  vertical-align: text-top;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, textarea, select {
+  *font-size: 100%;
+}
+
+legend {
+  color: #000;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  backface-visibility: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 62.8%;
+  }
+}
+html:has(.is-android) {
+  font-size: 58%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--fontColor);
+  font-family: var(--font-go-base);
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background: #f0f3ff;
+}
+
+@media (max-width: 767px) {
+  .for-pc {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .for-sp {
+    display: none !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a img {
+  opacity: 1;
+  transition: all 0.3s;
+}
+@media (min-width: 768px) {
+  a:hover img {
+    opacity: 0.8;
+  }
+}
+@media (max-width: 767px) {
+  a:active img {
+    opacity: 0.8;
+  }
+}
+
+p {
+  line-height: 190%;
+}
+p + p {
+  margin-top: 1.2rem;
+}
+@media (min-width: 768px) {
+  p a:hover {
+    color: var(--linkColor);
+  }
+}
+@media (max-width: 767px) {
+  p a:active {
+    color: var(--linkColor);
+  }
+}
+
+ol {
+  padding-left: 2rem;
+}
+
+ruby rt {
+  font-size: 40%;
+}
+
+.mySlider-track {
+  padding-block: 80px 90px;
+}
+@media (max-width: 767px) {
+  .mySlider-track {
+    padding-block: 80px;
+  }
+}
+.mySlider-track .splide__slide {
+  width: fit-content;
+}
+.mySlider-track .splide__slide.is-active:not(.splide__slide--clone) {
+  padding-inline: 60px;
+}
+@media (max-width: 767px) {
+  .mySlider-track .splide__slide.is-active:not(.splide__slide--clone) {
+    padding-inline: 20px;
+  }
+}
+.mySlider-prev {
+  display: none;
+}
+.mySlider-next {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .mySlider-next {
+    top: 46%;
+    width: 50px;
+  }
+}
+.mySlider-next svg {
+  transition: all 0.3s;
+  width: 100%;
+}
+.mySlider-next svg .circle {
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .mySlider-next svg:hover {
+    transform: scale(1.1);
+  }
+  .mySlider-next svg:hover .circle {
+    fill: #4e0de6;
+  }
+}
+
+.panel {
+  width: 303px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #333;
+  transition: transform 0.7s;
+}
+@media (max-width: 767px) {
+  .panel {
+    width: auto;
+    padding: 10px;
+  }
+}
+.splide__slide.is-active:not(.splide__slide--clone) .panel {
+  transform: scale(1.4);
+}
+.panel-img {
+  margin-bottom: 10px;
+}
+.panel-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.panel-text {
+  font-size: 1.2rem;
+}
